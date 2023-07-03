@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/add.png</file>
+        <file>icons/delete.png</file>
+        <file>icons/edit.png</file>
+        <file>icons/option.png</file>
+        <file>icons/pullDown.png</file>
+        <file>icons/putAway.png</file>
+        <file>icons/favicon.ico</file>
+        <file>icons/add_bottom.png</file>
+        <file>icons/add_top.png</file>
+        <file>icons/checkbox_checked.png</file>
+        <file>icons/checkbox_unchecked.png</file>
+        <file>icons/radio_normal.png</file>
+        <file>icons/radio_selected.png</file>
+        <file>QSS/Black.css</file>
+        <file>QSS/Blue.css</file>
+        <file>QSS/Brown.css</file>
+        <file>QSS/DarkGray.css</file>
+        <file>QSS/Gray.css</file>
+        <file>QSS/LightBlue.css</file>
+        <file>QSS/LightGray.css</file>
+        <file>QSS/Sliver.css</file>
+    </qresource>
+</RCC>

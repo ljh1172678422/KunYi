@@ -1,0 +1,2057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>928</width>
+    <height>624</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VSW_24AGE_4GE</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>状态显示</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_32">
+        <item row="0" column="0">
+         <widget class="QTabWidget" name="tabWidgetChipInfo">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="tab_8">
+           <attribute name="title">
+            <string>普通</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_34">
+            <item row="0" column="0">
+             <widget class="QTableWidget" name="tableWidgetNormalRJ45">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <column>
+               <property name="text">
+                <string>名称</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Auto Nego</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Link Status</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Link Speed</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Duplex</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_10">
+           <attribute name="title">
+            <string>车载</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QTableWidget" name="tableWidgetStatus">
+              <column>
+               <property name="text">
+                <string>名称</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Auto Nego</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Link Status</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Link Speed</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Master/Slave</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QGroupBox" name="groupBoxChipInfo">
+          <property name="maximumSize">
+           <size>
+            <width>228</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>属性信息</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_35">
+           <item row="1" column="0">
+            <layout class="QGridLayout" name="gridLayout_25">
+             <item row="2" column="1">
+              <widget class="QRadioButton" name="rBtnSpeed1000M">
+               <property name="text">
+                <string>1000 Mbps</string>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">buttonGroup_5</string>
+               </attribute>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QRadioButton" name="rBtnSpeed100M">
+               <property name="text">
+                <string>100 Mbps</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">buttonGroup_5</string>
+               </attribute>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QRadioButton" name="rBtnHalfDuplex">
+               <property name="text">
+                <string>Half Duplex</string>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">buttonGroup_7</string>
+               </attribute>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QRadioButton" name="rBtnSlave">
+               <property name="text">
+                <string>Slave</string>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">buttonGroup_6</string>
+               </attribute>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QRadioButton" name="rBtnAnegDisable">
+               <property name="text">
+                <string>Aneg Disable</string>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">buttonGroup_4</string>
+               </attribute>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QRadioButton" name="rBtnAnegEnable">
+               <property name="text">
+                <string>Aneg Enable</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">buttonGroup_4</string>
+               </attribute>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <spacer name="verticalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="3" column="0">
+              <widget class="QRadioButton" name="rBtnMaster">
+               <property name="text">
+                <string>Master</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">buttonGroup_6</string>
+               </attribute>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QRadioButton" name="rBtnFullDuplex">
+               <property name="text">
+                <string>Full Duplex</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">buttonGroup_7</string>
+               </attribute>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <item>
+                <spacer name="horizontalSpacer_11">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="BtnChipModify">
+                 <property name="text">
+                  <string>确认</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="0">
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>10</width>
+               <height>10</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>端口管理</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_31">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0">
+          <item>
+           <widget class="MyTableWidget" name="tableWidgetPortInfo">
+            <column>
+             <property name="text">
+              <string>端口名称</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>2118芯片序号</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>端口状态</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>连接类型</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>端口速率</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>VLAN ID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>双工状态</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>PVID</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_23" stretch="0,0">
+            <item>
+             <widget class="QGroupBox" name="groupBoxPortInfo">
+              <property name="title">
+               <string>基本配置</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_29">
+               <item row="1" column="0">
+                <layout class="QGridLayout" name="gridLayout_5" columnstretch="0,0,0,0,0,0">
+                 <item row="1" column="2">
+                  <widget class="QLineEdit" name="lineEditPortName"/>
+                 </item>
+                 <item row="4" column="3">
+                  <widget class="QLabel" name="label_15">
+                   <property name="text">
+                    <string>环回测试：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="4">
+                  <widget class="QComboBox" name="cBoxLoopback">
+                   <item>
+                    <property name="text">
+                     <string>内环</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>外环</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="QLabel" name="label_4">
+                   <property name="text">
+                    <string>VLAN ID：</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>lineEditVlanId</cstring>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="BtnPackUp">
+                   <property name="maximumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="toolTip">
+                    <string>收起基础配置界面</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="Resource.qrc">
+                     <normaloff>:/icons/pullDown.png</normaloff>:/icons/pullDown.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="4">
+                  <widget class="QComboBox" name="cBoxDuplex">
+                   <item>
+                    <property name="text">
+                     <string>Full</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Half</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="0" column="2">
+                  <spacer name="horizontalSpacer_33">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="1" column="4">
+                  <widget class="QComboBox" name="cBoxPortSpeed">
+                   <item>
+                    <property name="text">
+                     <string>1000M</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>100M</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>10M</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="3" column="3">
+                  <widget class="QLabel" name="label_37">
+                   <property name="text">
+                    <string>双工状态：</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>cBoxDuplex</cstring>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QLabel" name="label_34">
+                   <property name="text">
+                    <string>端口状态：</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>cBoxPortStatus</cstring>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QCheckBox" name="cBoxPVID">
+                   <property name="text">
+                    <string>PVID</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="2">
+                  <layout class="QHBoxLayout" name="horizontalLayout_22">
+                   <item>
+                    <widget class="QLineEdit" name="lineEditPVID"/>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_38">
+                     <property name="text">
+                      <string>（1-4094）</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QLabel" name="label_35">
+                   <property name="text">
+                    <string>连接类型：</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>cBoxConnectType</cstring>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="4">
+                  <widget class="QLineEdit" name="lineEditVlanId"/>
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="QComboBox" name="cBoxPortStatus">
+                   <item>
+                    <property name="text">
+                     <string>Enable</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Disable</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLabel" name="label">
+                   <property name="text">
+                    <string>端口名称：</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>lineEditPortName</cstring>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="2">
+                  <widget class="QComboBox" name="cBoxConnectType">
+                   <item>
+                    <property name="text">
+                     <string>Access</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Trunk</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Hybrid</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="1" column="3">
+                  <widget class="QLabel" name="label_36">
+                   <property name="text">
+                    <string>速率：</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>cBoxPortSpeed</cstring>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="5">
+                  <spacer name="horizontalSpacer_32">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item row="2" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                 <item>
+                  <spacer name="horizontalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="BtnModifyPortInfo">
+                   <property name="text">
+                    <string>确定修改</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayoutPackUp"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>端口镜像</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_21">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="0,1">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QGroupBox" name="groupBox">
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>监控端口</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_19">
+               <item row="1" column="0">
+                <layout class="QGridLayout" name="gridLayout_4">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_2">
+                   <property name="text">
+                    <string>端口：</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QComboBox" name="cBoxAllPort"/>
+                 </item>
+                 <item row="1" column="1">
+                  <layout class="QHBoxLayout" name="horizontalLayout_13">
+                   <item>
+                    <spacer name="horizontalSpacer_12">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="BtnSetMonitorPort">
+                     <property name="text">
+                      <string>设置</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item row="0" column="0">
+                <spacer name="horizontalSpacer_13">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBoxMirrorPort">
+            <property name="title">
+             <string>镜像端口</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="1" column="0">
+              <widget class="MirrorPortTableWidget" name="tableWidgetMirrorPort">
+               <column>
+                <property name="text">
+                 <string>端口名称</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>端口类型</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>使能</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>监控方向</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <spacer name="horizontalSpacer_14">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>10</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>环回测试</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_38">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <item>
+             <widget class="QGroupBox" name="groupBoxInner">
+              <property name="title">
+               <string>内环</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_36">
+               <item row="1" column="0">
+                <widget class="QListWidget" name="listWidgetInner"/>
+               </item>
+               <item row="0" column="0">
+                <spacer name="horizontalSpacer_9">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxOuter">
+              <property name="title">
+               <string>外环</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_37">
+               <item row="1" column="0">
+                <widget class="QListWidget" name="listWidgetOuter"/>
+               </item>
+               <item row="0" column="0">
+                <spacer name="horizontalSpacer_26">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBoxLoopback">
+            <property name="title">
+             <string>配置属性</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_16">
+             <item row="0" column="0">
+              <layout class="QGridLayout" name="gridLayout_14" columnstretch="0,0,1">
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_48">
+                 <property name="text">
+                  <string>使      能：</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QComboBox" name="cBoxTestEnable">
+                 <item>
+                  <property name="text">
+                   <string>Disable</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Enable</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QComboBox" name="cBoxTestMode">
+                 <item>
+                  <property name="text">
+                   <string>内环</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>外环</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="lineEditPortNameLoopback">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_18">
+                 <property name="text">
+                  <string>测试模式：</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="2">
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item>
+                  <spacer name="horizontalSpacer_8">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="BtnSetPortLoopback">
+                   <property name="text">
+                    <string>设置</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_17">
+                 <property name="text">
+                  <string>端口名称：</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <spacer name="horizontalSpacer_35">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>线缆检测</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_18">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <widget class="QTreeWidget" name="treeWidgetCableTestPort">
+            <column>
+             <property name="text">
+              <string>名称</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_14">
+            <item>
+             <spacer name="horizontalSpacer_10">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="tBtnCableTestStart">
+              <property name="text">
+               <string>测试</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_8">
+            <property name="title">
+             <string>测试结果：</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_17">
+             <item row="1" column="0">
+              <widget class="QTextEdit" name="cableTestResults"/>
+             </item>
+             <item row="0" column="0">
+              <spacer name="horizontalSpacer_24">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>10</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>VLAN配置</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_12">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,0">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,1">
+            <item>
+             <widget class="QGroupBox" name="groupBox_2">
+              <property name="title">
+               <string>VLAN 创建</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_6">
+               <item row="0" column="0">
+                <layout class="QGridLayout" name="gridLayout_7">
+                 <item row="1" column="1">
+                  <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0,1">
+                   <item>
+                    <widget class="QLabel" name="label_7">
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="checkBoxScopeCreate">
+                     <property name="text">
+                      <string>范围创建</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="labelCreatePrompt">
+                     <property name="text">
+                      <string>（例如：1，3，5，7，9等）</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="2" column="1">
+                  <layout class="QHBoxLayout" name="horizontalLayout_2">
+                   <item>
+                    <widget class="QLabel" name="label_6">
+                     <property name="text">
+                      <string>VLAN IDs：</string>
+                     </property>
+                     <property name="buddy">
+                      <cstring>lineEditCreate</cstring>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="lineEditCreate"/>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="BtnCreate">
+                     <property name="text">
+                      <string>创建</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="0" column="1">
+                  <spacer name="horizontalSpacer_23">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_3">
+              <property name="title">
+               <string>VLAN显示</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_8">
+               <item row="1" column="0">
+                <layout class="QVBoxLayout" name="verticalLayout_4">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_4">
+                   <item>
+                    <widget class="QLabel" name="label_8">
+                     <property name="text">
+                      <string>筛选条件：</string>
+                     </property>
+                     <property name="buddy">
+                      <cstring>showMinVlanId</cstring>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="showMinVlanId">
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_9">
+                     <property name="text">
+                      <string>-</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="showMaxVlanId">
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="BtnScreen">
+                     <property name="text">
+                      <string>确定</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_4">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QTableWidget" name="tableWidgetVlanInfo">
+                   <column>
+                    <property name="text">
+                     <string>ID</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>描述</string>
+                    </property>
+                   </column>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_6">
+                   <item>
+                    <spacer name="horizontalSpacer_5">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="BtnDeleteVlanID">
+                     <property name="text">
+                      <string>删除</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item row="0" column="0">
+                <spacer name="horizontalSpacer_22">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,0">
+            <item>
+             <widget class="QGroupBox" name="groupBox_4">
+              <property name="title">
+               <string>端口信息</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_9">
+               <item row="2" column="0">
+                <widget class="QTableWidget" name="tableWidgetVlanPortInfo">
+                 <column>
+                  <property name="text">
+                   <string>端口名称</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>连接类型</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_24">
+                 <item>
+                  <widget class="QRadioButton" name="rBtnVlanPortUntagged">
+                   <property name="text">
+                    <string>Untagged</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">buttonGroup_3</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="rBtnVlanPortTagged">
+                   <property name="text">
+                    <string>Tagged</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">buttonGroup_3</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QRadioButton" name="rBtnVlanPortNonMember">
+                   <property name="text">
+                    <string>非成员</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">buttonGroup_3</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item row="3" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <item>
+                  <spacer name="horizontalSpacer_3">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="BtnDeleteVlanPort">
+                   <property name="text">
+                    <string>删除</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="0" column="0">
+                <spacer name="horizontalSpacer_25">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_5">
+              <property name="title">
+               <string>修改端口信息</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_10">
+               <item row="1" column="0">
+                <layout class="QGridLayout" name="gridLayout_11">
+                 <property name="sizeConstraint">
+                  <enum>QLayout::SetDefaultConstraint</enum>
+                 </property>
+                 <item row="1" column="1">
+                  <widget class="QComboBox" name="cBoxConnectTypeVLAN">
+                   <item>
+                    <property name="text">
+                     <string>Access</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Trunk</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Hybrid</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>QinQ</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_11">
+                   <property name="text">
+                    <string>端口名称：</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>portNameVLAN</cstring>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QLabel" name="label_10">
+                   <property name="text">
+                    <string>VLAN ID:</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>portVlanIDVLAN</cstring>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="3">
+                  <widget class="QComboBox" name="cBoxVlanPortType">
+                   <item>
+                    <property name="text">
+                     <string>Untagged</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Tagged</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>NonMember</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="QLabel" name="label_VlanTaggedId">
+                   <property name="text">
+                    <string>VLAN Tagged ID：</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>lineEditVlanTaggedID</cstring>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="3">
+                  <widget class="QLineEdit" name="portVlanIDVLAN"/>
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="QLineEdit" name="lineEditVlanTaggedID"/>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_12">
+                   <property name="text">
+                    <string>连接类型：</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>cBoxConnectTypeVLAN</cstring>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="2">
+                  <widget class="QLabel" name="label_46">
+                   <property name="text">
+                    <string>VLAN端口类型：</string>
+                   </property>
+                   <property name="buddy">
+                    <cstring>cBoxVlanPortType</cstring>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLineEdit" name="portNameVLAN"/>
+                 </item>
+                 <item row="3" column="3">
+                  <layout class="QHBoxLayout" name="horizontalLayout_25">
+                   <item>
+                    <spacer name="horizontalSpacer_6">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="BtnModifyPortInfoVLAN">
+                     <property name="text">
+                      <string>确定</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item row="0" column="0">
+                <spacer name="horizontalSpacer_21">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>MAC配置</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_28">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="1,0">
+          <item>
+           <widget class="QGroupBox" name="groupBox_6">
+            <property name="title">
+             <string>已有MAC地址</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_13">
+             <item row="2" column="0">
+              <widget class="QTableWidget" name="tableWidgetMacInfo">
+               <column>
+                <property name="text">
+                 <string>MAC地址</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>VLAN ID</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>类型</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>端口</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_11">
+               <item>
+                <widget class="QRadioButton" name="rBtnAllMac">
+                 <property name="text">
+                  <string>全部</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">buttonGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="rBtnDynamicMacAddress">
+                 <property name="text">
+                  <string>动态MAC地址</string>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">buttonGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="rBtnStaticMacAddress">
+                 <property name="text">
+                  <string>静态MAC地址</string>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">buttonGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="rBtnBlackhole">
+                 <property name="text">
+                  <string>黑洞MAC地址</string>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">buttonGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="rBtnLearned">
+                 <property name="text">
+                  <string>学习MAC地址</string>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">buttonGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+               <item>
+                <widget class="QRadioButton" name="rBtnOther">
+                 <property name="text">
+                  <string>其他</string>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">buttonGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_18">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item row="0" column="0">
+              <spacer name="horizontalSpacer_16">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>10</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <item>
+             <widget class="QGroupBox" name="groupBox_11">
+              <property name="title">
+               <string>MAC配置</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_15">
+               <item row="1" column="0">
+                <layout class="QVBoxLayout" name="verticalLayout_16">
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_24" columnstretch="0,0">
+                   <item row="1" column="1">
+                    <widget class="QLineEdit" name="lineEditMACAddress"/>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="label_28">
+                     <property name="text">
+                      <string>端口：</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="buddy">
+                      <cstring>cBoxMacPort</cstring>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="label_14">
+                     <property name="text">
+                      <string>MAC地址：</string>
+                     </property>
+                     <property name="buddy">
+                      <cstring>lineEditMACAddress</cstring>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="label_26">
+                     <property name="text">
+                      <string>类型：</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="buddy">
+                      <cstring>cBoxMacType</cstring>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QComboBox" name="cBoxMacType">
+                     <item>
+                      <property name="text">
+                       <string>static</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>dynamic</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>blackhole</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QComboBox" name="cBoxMacPort"/>
+                   </item>
+                   <item row="0" column="1">
+                    <spacer name="horizontalSpacer_20">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>10</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="label_27">
+                     <property name="text">
+                      <string>VLAN ID：</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="buddy">
+                      <cstring>cBoxMacVlanID</cstring>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QComboBox" name="cBoxMacVlanID"/>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="0,0,0,0,0">
+                   <item>
+                    <widget class="QCheckBox" name="cBoxOld">
+                     <property name="text">
+                      <string>老化时间</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="sBoxOldTime">
+                     <property name="maximumSize">
+                      <size>
+                       <width>80</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="minimum">
+                      <number>10</number>
+                     </property>
+                     <property name="maximum">
+                      <number>630</number>
+                     </property>
+                     <property name="value">
+                      <number>300</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_16">
+                     <property name="text">
+                      <string>（秒）</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_17">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="BtnCreateMacAddress">
+                     <property name="text">
+                      <string>创建</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_14">
+              <property name="title">
+               <string>提示</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_27">
+               <item row="1" column="0">
+                <layout class="QGridLayout" name="gridLayout_26">
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="label_31">
+                   <property name="text">
+                    <string>Blackhole：表示该表项是黑洞表项</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QLabel" name="label_32">
+                   <property name="text">
+                    <string>Learned：表示该表项是设备学习得来的动态表项</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="label_30">
+                   <property name="text">
+                    <string>Config dynamic：表示该表项是用户手工配置的动态表项</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="0">
+                  <widget class="QLabel" name="label_33">
+                   <property name="text">
+                    <string>Other：表示该表项为除上述状态外的其他类型</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_29">
+                   <property name="text">
+                    <string>Config static：表示该表项是用户手工配置的静态表项</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <spacer name="horizontalSpacer_19">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>928</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSerial">
+    <property name="title">
+     <string>串口通讯</string>
+    </property>
+    <addaction name="actionOpenSerial"/>
+    <addaction name="actionCloseSerial"/>
+   </widget>
+   <widget class="QMenu" name="menuNet">
+    <property name="title">
+     <string>网络通讯</string>
+    </property>
+    <addaction name="actionNetConfig"/>
+    <addaction name="actionDisConnect"/>
+   </widget>
+   <widget class="QMenu" name="menuStyleSheet">
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="title">
+     <string>窗口样式</string>
+    </property>
+    <addaction name="actionBlack"/>
+    <addaction name="actionBlue"/>
+    <addaction name="actionBrown"/>
+    <addaction name="actionDarkGray"/>
+    <addaction name="actionGray"/>
+    <addaction name="actionLightBlue"/>
+    <addaction name="actionLightGray"/>
+    <addaction name="actionSliver"/>
+   </widget>
+   <addaction name="menuSerial"/>
+   <addaction name="menuNet"/>
+   <addaction name="menuStyleSheet"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpenSerial">
+   <property name="text">
+    <string>打开串口</string>
+   </property>
+  </action>
+  <action name="actionCloseSerial">
+   <property name="text">
+    <string>关闭串口</string>
+   </property>
+  </action>
+  <action name="actionNetConfig">
+   <property name="text">
+    <string>网络配置</string>
+   </property>
+  </action>
+  <action name="actionDisConnect">
+   <property name="text">
+    <string>断开连接</string>
+   </property>
+   <property name="toolTip">
+    <string>断开连接</string>
+   </property>
+  </action>
+  <action name="actionBlack">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Black</string>
+   </property>
+  </action>
+  <action name="actionBlue">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Blue</string>
+   </property>
+  </action>
+  <action name="actionBrown">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Brown</string>
+   </property>
+  </action>
+  <action name="actionDarkGray">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>DarkGray</string>
+   </property>
+  </action>
+  <action name="actionGray">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Gray</string>
+   </property>
+  </action>
+  <action name="actionLightBlue">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>LightBlue</string>
+   </property>
+  </action>
+  <action name="actionLightGray">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>LightGray</string>
+   </property>
+  </action>
+  <action name="actionSliver">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Sliver</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyTableWidget</class>
+   <extends>QTableWidget</extends>
+   <header>MyTableWidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MirrorPortTableWidget</class>
+   <extends>QTableWidget</extends>
+   <header location="global">MirrorPortTableWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>tabWidgetChipInfo</tabstop>
+  <tabstop>tableWidgetNormalRJ45</tabstop>
+  <tabstop>tableWidgetPortInfo</tabstop>
+  <tabstop>lineEditPortName</tabstop>
+  <tabstop>cBoxPortStatus</tabstop>
+  <tabstop>cBoxConnectType</tabstop>
+  <tabstop>lineEditPVID</tabstop>
+  <tabstop>BtnModifyPortInfo</tabstop>
+  <tabstop>treeWidgetCableTestPort</tabstop>
+  <tabstop>tBtnCableTestStart</tabstop>
+  <tabstop>cableTestResults</tabstop>
+  <tabstop>lineEditCreate</tabstop>
+  <tabstop>BtnCreate</tabstop>
+  <tabstop>showMinVlanId</tabstop>
+  <tabstop>showMaxVlanId</tabstop>
+  <tabstop>BtnScreen</tabstop>
+  <tabstop>tableWidgetVlanInfo</tabstop>
+  <tabstop>rBtnVlanPortUntagged</tabstop>
+  <tabstop>rBtnVlanPortTagged</tabstop>
+  <tabstop>rBtnVlanPortNonMember</tabstop>
+  <tabstop>tableWidgetVlanPortInfo</tabstop>
+  <tabstop>BtnDeleteVlanPort</tabstop>
+  <tabstop>portNameVLAN</tabstop>
+  <tabstop>cBoxVlanPortType</tabstop>
+  <tabstop>cBoxConnectTypeVLAN</tabstop>
+  <tabstop>portVlanIDVLAN</tabstop>
+  <tabstop>lineEditVlanTaggedID</tabstop>
+  <tabstop>BtnDeleteVlanID</tabstop>
+  <tabstop>BtnModifyPortInfoVLAN</tabstop>
+  <tabstop>rBtnAllMac</tabstop>
+  <tabstop>rBtnDynamicMacAddress</tabstop>
+  <tabstop>rBtnStaticMacAddress</tabstop>
+  <tabstop>rBtnBlackhole</tabstop>
+  <tabstop>rBtnLearned</tabstop>
+  <tabstop>rBtnOther</tabstop>
+  <tabstop>tableWidgetMacInfo</tabstop>
+  <tabstop>lineEditMACAddress</tabstop>
+  <tabstop>cBoxMacType</tabstop>
+  <tabstop>cBoxMacVlanID</tabstop>
+  <tabstop>cBoxMacPort</tabstop>
+  <tabstop>tableWidgetStatus</tabstop>
+ </tabstops>
+ <resources>
+  <include location="Resource.qrc"/>
+ </resources>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup_4"/>
+  <buttongroup name="buttonGroup_6"/>
+  <buttongroup name="buttonGroup_3"/>
+  <buttongroup name="buttonGroup"/>
+  <buttongroup name="buttonGroup_7"/>
+  <buttongroup name="buttonGroup_5"/>
+ </buttongroups>
+</ui>
