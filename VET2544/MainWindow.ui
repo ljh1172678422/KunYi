@@ -1,0 +1,1615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1035</width>
+    <height>711</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VET2544测试套件</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_21">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>串口设置</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="1" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QComboBox" name="comboBoxSerialPort"/>
+             </item>
+             <item>
+              <layout class="QGridLayout" name="gridLayout_2">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label">
+                 <property name="text">
+                  <string>波特率：</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="label_5">
+                 <property name="text">
+                  <string>奇偶校验位：</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QComboBox" name="comboBoxStopBits">
+                 <item>
+                  <property name="text">
+                   <string>1</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>3</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>2</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QComboBox" name="comboBoxDataBits">
+                 <property name="currentIndex">
+                  <number>3</number>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>5</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>6</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>7</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>8</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QComboBox" name="comboBoxCheckBits">
+                 <item>
+                  <property name="text">
+                   <string>NoParity</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>EvenParity</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>OddParity</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>SpaceParity</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>MarkParity</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="label_3">
+                 <property name="text">
+                  <string>数据位：</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>停止位：</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <item>
+                  <spacer name="horizontalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="BtnOpenSerial">
+                   <property name="text">
+                    <string>打开串口</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="0" column="1">
+                <widget class="QComboBox" name="comboBoxBaud">
+                 <property name="currentIndex">
+                  <number>3</number>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>1200</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>2400</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>4800</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>9600</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>19200</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>38400</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>57600</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>115200</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="0">
+            <spacer name="horizontalSpacer_24">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
+           <string>RFC2544测试选项</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="1" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QCheckBox" name="cBoxThroughput">
+               <property name="text">
+                <string>吞吐量测试</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="cBoxDelay">
+               <property name="text">
+                <string>时延测试</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="cBoxPaketLossRate">
+               <property name="text">
+                <string>丢包率测试</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="cBoxBackToBack">
+               <property name="text">
+                <string>背靠背测试</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="0">
+            <spacer name="horizontalSpacer_25">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="BtnTimerStart">
+          <property name="text">
+           <string>开始</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4" stretch="3,1">
+        <item>
+         <layout class="QGridLayout" name="gridLayout" columnstretch="0,0">
+          <item row="1" column="1">
+           <widget class="QGroupBox" name="gBoxBackToBack">
+            <property name="title">
+             <string>背靠背测试</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_17" rowstretch="0,1,0,0">
+             <item row="2" column="0">
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_22" stretch="0,1">
+                 <item>
+                  <widget class="QWidget" name="gBoxSameConfigBackToBack" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_10">
+                    <item>
+                     <layout class="QGridLayout" name="gridLayout_11">
+                      <item row="0" column="1">
+                       <widget class="QSpinBox" name="sBoxTimeBtoB">
+                        <property name="maximum">
+                         <number>10000</number>
+                        </property>
+                        <property name="value">
+                         <number>60</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="0">
+                       <widget class="QRadioButton" name="rBtnTime_BtoB">
+                        <property name="text">
+                         <string>定时模式（秒）</string>
+                        </property>
+                        <property name="checked">
+                         <bool>true</bool>
+                        </property>
+                        <attribute name="buttonGroup">
+                         <string notr="true">buttonGroup_4</string>
+                        </attribute>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <widget class="QSpinBox" name="sBoxCountBtoB">
+                        <property name="maximum">
+                         <number>100000</number>
+                        </property>
+                        <property name="value">
+                         <number>1000</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QRadioButton" name="rBtnCount_BtoB">
+                        <property name="text">
+                         <string>定量模式（帧）</string>
+                        </property>
+                        <attribute name="buttonGroup">
+                         <string notr="true">buttonGroup_4</string>
+                        </attribute>
+                       </widget>
+                      </item>
+                      <item row="0" column="2">
+                       <spacer name="horizontalSpacer_7">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QGridLayout" name="gridLayout_13">
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="label_12">
+                        <property name="text">
+                         <string>速率：</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QLabel" name="label_14">
+                        <property name="text">
+                         <string>测试帧长：</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="0,1,0">
+                        <item>
+                         <widget class="QLineEdit" name="lineEditSpeedBtoB"/>
+                        </item>
+                        <item>
+                         <spacer name="horizontalSpacer_9">
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>40</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="tBtnSetSpeedBtoB">
+                          <property name="text">
+                           <string>set</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item row="1" column="1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="1,1,0">
+                        <item>
+                         <widget class="MultiComboBox" name="comBoxFrameLengthBtoB"/>
+                        </item>
+                        <item>
+                         <spacer name="horizontalSpacer_20">
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>40</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="tBtnSetFrameLengthBtoB">
+                          <property name="text">
+                           <string>set</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer_3">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="gBoxOneConfigBackToBack" native="true">
+                   <layout class="QGridLayout" name="gridLayout_25">
+                    <item row="0" column="1">
+                     <widget class="MyTableWidget" name="backToBackConfigData">
+                      <column>
+                       <property name="text">
+                        <string>测试帧长</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>发送模式</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>发送时长</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>发送数量</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>初始速率</string>
+                       </property>
+                      </column>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_25">
+               <item>
+                <widget class="QCheckBox" name="cBoxOneBackToBack">
+                 <property name="text">
+                  <string>单个配置</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_23">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_15">
+               <item>
+                <spacer name="horizontalSpacer_13">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="BtnStartBtoB">
+                 <property name="text">
+                  <string>测试开始</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="0" column="0">
+              <spacer name="horizontalSpacer_29">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QGroupBox" name="gBoxDelay">
+            <property name="title">
+             <string>时延测试</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_16">
+             <item row="2" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_20" stretch="0,0">
+               <item>
+                <widget class="QWidget" name="gBoxSameConfigDelay" native="true">
+                 <layout class="QGridLayout" name="gridLayout_24">
+                  <item row="3" column="0">
+                   <layout class="QGridLayout" name="gridLayout_9">
+                    <item row="0" column="0">
+                     <widget class="QCheckBox" name="cBoxDelayCom">
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QLabel" name="label_10">
+                      <property name="text">
+                       <string>时延补偿</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <layout class="QHBoxLayout" name="horizontalLayout_8">
+                      <item>
+                       <widget class="QLabel" name="labelDelayCom">
+                        <property name="text">
+                         <string>时延补偿：</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="lineEditDelayCom"/>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_16">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="tBtnDelayComSet">
+                        <property name="text">
+                         <string>set</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="2" column="0">
+                   <layout class="QGridLayout" name="gridLayout_10">
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_8">
+                      <property name="text">
+                       <string>速率：</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="1,1,0">
+                      <item>
+                       <widget class="MultiComboBox" name="comBoxFrameLengthDelay"/>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_18">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="tBtnSetFrameLengthDelay">
+                        <property name="text">
+                         <string>set</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="label_9">
+                      <property name="text">
+                       <string>测试帧长：</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <layout class="QHBoxLayout" name="horizontalLayout_6">
+                      <item>
+                       <widget class="QLineEdit" name="lineEditSpeedDelay"/>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_19">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="tBtnSetSpeedDelay">
+                        <property name="text">
+                         <string>set</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item row="2" column="1">
+                     <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="0,1,0">
+                      <item>
+                       <widget class="QComboBox" name="cBoxCalcMode">
+                        <property name="maximumSize">
+                         <size>
+                          <width>200</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>先进先出</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>先进后出</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>后进先出</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>后进后出</string>
+                         </property>
+                        </item>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_14">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="tBtnSetCalcMode">
+                        <property name="text">
+                         <string>set</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="label_11">
+                      <property name="text">
+                       <string>计算方式：</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="1" column="0">
+                   <layout class="QGridLayout" name="gridLayout_8">
+                    <item row="0" column="1">
+                     <widget class="QSpinBox" name="sBoxTimeDelay">
+                      <property name="maximum">
+                       <number>10000</number>
+                      </property>
+                      <property name="value">
+                       <number>60</number>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <widget class="QRadioButton" name="rBtnTime_Delay">
+                      <property name="text">
+                       <string>定时模式（秒）</string>
+                      </property>
+                      <property name="checked">
+                       <bool>true</bool>
+                      </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">buttonGroup_2</string>
+                      </attribute>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QSpinBox" name="sBoxCountDelay">
+                      <property name="maximum">
+                       <number>100000</number>
+                      </property>
+                      <property name="value">
+                       <number>1000</number>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QRadioButton" name="rBtnCount_Delay">
+                      <property name="text">
+                       <string>定量模式（帧）</string>
+                      </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">buttonGroup_2</string>
+                      </attribute>
+                     </widget>
+                    </item>
+                    <item row="0" column="2">
+                     <spacer name="horizontalSpacer_5">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="4" column="0">
+                   <spacer name="verticalSpacer_4">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="gBoxOneConfigDelay" native="true">
+                 <layout class="QGridLayout" name="gridLayout_20">
+                  <item row="0" column="1">
+                   <widget class="MyTableWidget" name="delayConfigData">
+                    <column>
+                     <property name="text">
+                      <string>测试帧长</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>发送模式</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>发送时长</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>发送数量</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>计算方式</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>时延补偿</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>初始速率</string>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_23">
+               <item>
+                <widget class="QCheckBox" name="cBoxOneDelay">
+                 <property name="text">
+                  <string>单个配置</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_21">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_13">
+               <item>
+                <spacer name="horizontalSpacer_11">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="BtnStartDelay">
+                 <property name="text">
+                  <string>测试开始</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="0" column="0">
+              <spacer name="horizontalSpacer_27">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="gBoxPaketLossRate">
+            <property name="title">
+             <string>丢包率测试</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_14" rowstretch="0,0,0,0">
+             <item row="2" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="1,0">
+               <item>
+                <widget class="QWidget" name="gBoxOneConfigPaketLossRate" native="true">
+                 <layout class="QGridLayout" name="gridLayout_5">
+                  <item row="0" column="1">
+                   <widget class="MyTableWidget" name="paketLossRateConfigData">
+                    <column>
+                     <property name="text">
+                      <string>测试帧长</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>发送模式</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>发送时长</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>发送数量</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>初始速率</string>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="gBoxSameConfigPaketLossRate" native="true">
+                 <layout class="QVBoxLayout" name="verticalLayout_9">
+                  <item>
+                   <layout class="QGridLayout" name="gridLayout_12">
+                    <item row="0" column="1">
+                     <widget class="QSpinBox" name="sBoxTimePaketLossRate">
+                      <property name="maximum">
+                       <number>10000</number>
+                      </property>
+                      <property name="value">
+                       <number>60</number>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <widget class="QRadioButton" name="rBtnTime_DBL">
+                      <property name="text">
+                       <string>定时模式（秒）</string>
+                      </property>
+                      <property name="checked">
+                       <bool>true</bool>
+                      </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">buttonGroup_3</string>
+                      </attribute>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QSpinBox" name="sBoxCountPaketLossRate">
+                      <property name="maximum">
+                       <number>100000</number>
+                      </property>
+                      <property name="value">
+                       <number>1000</number>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QRadioButton" name="rBtnCount_DBL">
+                      <property name="text">
+                       <string>定量模式（帧）</string>
+                      </property>
+                      <attribute name="buttonGroup">
+                       <string notr="true">buttonGroup_3</string>
+                      </attribute>
+                     </widget>
+                    </item>
+                    <item row="0" column="2">
+                     <spacer name="horizontalSpacer_8">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="0,1">
+                    <item>
+                     <widget class="QLabel" name="label_13">
+                      <property name="text">
+                       <string>测试帧长：</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="1,1,0">
+                      <item>
+                       <widget class="MultiComboBox" name="comBoxFrameLengthPaketLossRate"/>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_6">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="tBtnSetFrameLengthPaketLossRate">
+                        <property name="text">
+                         <string>set</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <spacer name="verticalSpacer_5">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_14">
+               <item>
+                <spacer name="horizontalSpacer_12">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="BtnStartPaketLossRate">
+                 <property name="text">
+                  <string>测试开始</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_24">
+               <item>
+                <widget class="QCheckBox" name="cBoxOnePaketLossRate">
+                 <property name="text">
+                  <string>单个配置</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_22">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item row="0" column="0">
+              <spacer name="horizontalSpacer_28">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="gBoxThroughput">
+            <property name="title">
+             <string>吞吐量测试</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_15">
+             <item row="2" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_19" stretch="0,0">
+               <item>
+                <widget class="QWidget" name="gBoxSameConfig" native="true">
+                 <layout class="QGridLayout" name="gridLayout_18">
+                  <item row="1" column="0">
+                   <layout class="QGridLayout" name="gridLayout_7">
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_7">
+                      <property name="text">
+                       <string>速率：</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="label_6">
+                      <property name="text">
+                       <string>测试帧长：</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,1,0">
+                      <item>
+                       <widget class="QComboBox" name="comBoxSpeedThroughput">
+                        <item>
+                         <property name="text">
+                          <string>10M</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>100M</string>
+                         </property>
+                        </item>
+                        <item>
+                         <property name="text">
+                          <string>1000M</string>
+                         </property>
+                        </item>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_4">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="tBtnSetSpeedThroughput">
+                        <property name="text">
+                         <string>set</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item row="1" column="1">
+                     <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,1,0">
+                      <item>
+                       <widget class="MultiComboBox" name="comBoxFrameLengthThroughput"/>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_17">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="tBtnSetFrameLengthThroughput">
+                        <property name="text">
+                         <string>set</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="0" column="0">
+                   <layout class="QGridLayout" name="gridLayout_6">
+                    <item row="0" column="1">
+                     <widget class="QSpinBox" name="sBoxTimeThroughput">
+                      <property name="maximum">
+                       <number>10000</number>
+                      </property>
+                      <property name="value">
+                       <number>60</number>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <widget class="QRadioButton" name="rBtnTime_TTL">
+                      <property name="text">
+                       <string>定时模式（秒）</string>
+                      </property>
+                      <property name="checked">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QSpinBox" name="sBoxCountThroughput">
+                      <property name="maximum">
+                       <number>100000</number>
+                      </property>
+                      <property name="value">
+                       <number>1000</number>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QRadioButton" name="rBtnCount_TTL">
+                      <property name="text">
+                       <string>定量模式（帧）</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="2">
+                     <spacer name="horizontalSpacer_3">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </item>
+                  <item row="2" column="0">
+                   <spacer name="verticalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="gBoxOneConfig" native="true">
+                 <layout class="QGridLayout" name="gridLayout_19">
+                  <item row="0" column="1">
+                   <widget class="MyTableWidget" name="throughputConfigData">
+                    <column>
+                     <property name="text">
+                      <string>测试帧长</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>发送模式</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>发送时长</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>发送数量</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>初始速率</string>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_18">
+               <item>
+                <widget class="QCheckBox" name="cBoxOneThroughput">
+                 <property name="text">
+                  <string>单个配置</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_15">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_12">
+               <item>
+                <spacer name="horizontalSpacer_10">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="BtnStartThroughput">
+                 <property name="text">
+                  <string>测试开始</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="0" column="0">
+              <spacer name="horizontalSpacer_26">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEditProgressTips"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>结果路径：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEditFilePath"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="tBtnSelectFilePath">
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="BtnOutPut">
+        <property name="text">
+         <string>预览</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MultiComboBox</class>
+   <extends>QComboBox</extends>
+   <header>MultiComboBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MyTableWidget</class>
+   <extends>QTableWidget</extends>
+   <header>MyTableWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>comboBoxSerialPort</tabstop>
+  <tabstop>comboBoxBaud</tabstop>
+  <tabstop>comboBoxDataBits</tabstop>
+  <tabstop>comboBoxStopBits</tabstop>
+  <tabstop>comboBoxCheckBits</tabstop>
+  <tabstop>BtnOpenSerial</tabstop>
+  <tabstop>cBoxThroughput</tabstop>
+  <tabstop>cBoxDelay</tabstop>
+  <tabstop>cBoxPaketLossRate</tabstop>
+  <tabstop>cBoxBackToBack</tabstop>
+  <tabstop>BtnTimerStart</tabstop>
+  <tabstop>cBoxOneThroughput</tabstop>
+  <tabstop>rBtnTime_TTL</tabstop>
+  <tabstop>sBoxTimeThroughput</tabstop>
+  <tabstop>rBtnCount_TTL</tabstop>
+  <tabstop>sBoxCountThroughput</tabstop>
+  <tabstop>comBoxSpeedThroughput</tabstop>
+  <tabstop>tBtnSetSpeedThroughput</tabstop>
+  <tabstop>comBoxFrameLengthThroughput</tabstop>
+  <tabstop>tBtnSetFrameLengthThroughput</tabstop>
+  <tabstop>throughputConfigData</tabstop>
+  <tabstop>BtnStartThroughput</tabstop>
+  <tabstop>cBoxOneDelay</tabstop>
+  <tabstop>rBtnTime_Delay</tabstop>
+  <tabstop>sBoxTimeDelay</tabstop>
+  <tabstop>rBtnCount_Delay</tabstop>
+  <tabstop>sBoxCountDelay</tabstop>
+  <tabstop>lineEditSpeedDelay</tabstop>
+  <tabstop>tBtnSetSpeedDelay</tabstop>
+  <tabstop>comBoxFrameLengthDelay</tabstop>
+  <tabstop>tBtnSetFrameLengthDelay</tabstop>
+  <tabstop>cBoxCalcMode</tabstop>
+  <tabstop>tBtnSetCalcMode</tabstop>
+  <tabstop>cBoxDelayCom</tabstop>
+  <tabstop>lineEditDelayCom</tabstop>
+  <tabstop>tBtnDelayComSet</tabstop>
+  <tabstop>delayConfigData</tabstop>
+  <tabstop>BtnStartDelay</tabstop>
+  <tabstop>cBoxOnePaketLossRate</tabstop>
+  <tabstop>rBtnTime_DBL</tabstop>
+  <tabstop>sBoxTimePaketLossRate</tabstop>
+  <tabstop>rBtnCount_DBL</tabstop>
+  <tabstop>sBoxCountPaketLossRate</tabstop>
+  <tabstop>comBoxFrameLengthPaketLossRate</tabstop>
+  <tabstop>tBtnSetFrameLengthPaketLossRate</tabstop>
+  <tabstop>paketLossRateConfigData</tabstop>
+  <tabstop>BtnStartPaketLossRate</tabstop>
+  <tabstop>cBoxOneBackToBack</tabstop>
+  <tabstop>rBtnTime_BtoB</tabstop>
+  <tabstop>sBoxTimeBtoB</tabstop>
+  <tabstop>rBtnCount_BtoB</tabstop>
+  <tabstop>sBoxCountBtoB</tabstop>
+  <tabstop>lineEditSpeedBtoB</tabstop>
+  <tabstop>tBtnSetSpeedBtoB</tabstop>
+  <tabstop>comBoxFrameLengthBtoB</tabstop>
+  <tabstop>tBtnSetFrameLengthBtoB</tabstop>
+  <tabstop>backToBackConfigData</tabstop>
+  <tabstop>BtnStartBtoB</tabstop>
+  <tabstop>lineEditFilePath</tabstop>
+  <tabstop>tBtnSelectFilePath</tabstop>
+  <tabstop>BtnOutPut</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup_2"/>
+  <buttongroup name="buttonGroup_4"/>
+  <buttongroup name="buttonGroup_3"/>
+ </buttongroups>
+</ui>
