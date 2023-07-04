@@ -48,7 +48,7 @@ public:
      * @param portId        端口ID
      * @return              PORT_DATA结构体数据
      */
-    PORT_DATA getPortInfo(int portId);
+    PORT_DATA getPortInfo(const QString& portName);
 
     /**
      * @brief getPortInfoList   批量获取端口信息
@@ -73,7 +73,7 @@ public:
      * @param portID        端口ID
      * @return              CHIP_DATA结构体数据--芯片属性
      */
-    CHIP_DATA getChipInfo(int portID);
+    CHIP_DATA getChipInfo(const QString& portName);
 
     int getSpeed(int speed);
 

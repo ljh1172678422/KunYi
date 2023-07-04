@@ -97,10 +97,11 @@ QByteArray TcpClientThread::sendData(int cmd, QByteArray content)
     return sendResult;
 }
 
-PORT_DATA TcpClientThread::getPortInfo(int portId)
+PORT_DATA TcpClientThread::getPortInfo(const QString &portName)
 {
     PORT_DATA data;
 
+    int portId = portMapping(portName);
     QByteArray content;
     content.clear();
     content.append(QString::number(PORT_INFO).toLocal8Bit());
@@ -131,8 +132,9 @@ QList<PORT_DATA> TcpClientThread::getPortInfoList()
     result.clear();
     m_progressBar->setMaximum(28);
     for(int i = 0; i < 28; i ++) {
+        QString portName = QString("P%1").arg(QString::number(i + 1));
         try {
-            PORT_DATA data = getPortInfo(i);
+            PORT_DATA data = getPortInfo(portName);
             result.append(data);
             m_progressBar->setValue(i + 1);
         }
@@ -204,19 +206,20 @@ void TcpClientThread::setPortInfoList(const QList<PORT_DATA> &dataList)
     }
 }
 
-CHIP_DATA TcpClientThread::getChipInfo(int portID)
+CHIP_DATA TcpClientThread::getChipInfo(const QString &portName)
 {
+    int portId = portMapping(portName);
     CHIP_DATA data;
     QByteArray content;
     content.clear();
     content.append(QString::number(CHIP_INFO).toLocal8Bit());
-    content.append(portIdToCmd(portID));
+    content.append(portIdToCmd(portId));
 
     QByteArray result = sendData(READ_CMD, content);
     if(result.isNull()){
         throw ServiceException("");
     }
-    data.chipName = portMapping(portID);
+    data.chipName = portMapping(portId);
 
     //uint8_t state = result[3]);
     uint8_t aneg = result[4] - '0';
@@ -227,12 +230,12 @@ CHIP_DATA TcpClientThread::getChipInfo(int portID)
     data.linkStatus = linkStatus;
     data.linkSpeed = getSpeed(linkSpeed);
 
-    if(portID >= 0 && portID <= 3) {
+    if(portId >= 0 && portId <= 3) {
         uint8_t duplex = result[7] - '0';
         data.duplex = duplex;
         data.chipType = 0;
     }
-    else if(portID >= 4 && portID <= 27) {
+    else if(portId >= 4 && portId <= 27) {
         uint8_t master = result[7] - '0';
         data.masterSlave = master;
         data.chipType = 1;
@@ -259,8 +262,9 @@ QList<CHIP_DATA> TcpClientThread::getChipInfoList()
     result.clear();
     m_progressBar->setMaximum(28);
     for(int i = 0; i < 28; i ++) {
+        QString portName = QString("P%1").arg(QString::number(i + 1));
         try {
-            CHIP_DATA data = getChipInfo(i);
+            CHIP_DATA data = getChipInfo(portName);
             result.append(data);
             m_progressBar->setValue(i + 1);
         }

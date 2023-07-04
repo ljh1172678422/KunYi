@@ -18,10 +18,10 @@ void MyTableWidget::initConnect()
 {
     auto rowCount = this->rowCount();
     for(int row = 0; row < rowCount; row ++) {
-        connect((QComboBox*)(this->cellWidget(row, 1)), SIGNAL(currentIndexChanged(int)), this, SLOT(slotCurrentIndexChanged(int)));
         connect((QComboBox*)(this->cellWidget(row, 2)), SIGNAL(currentIndexChanged(int)), this, SLOT(slotCurrentIndexChanged(int)));
         connect((QComboBox*)(this->cellWidget(row, 3)), SIGNAL(currentIndexChanged(int)), this, SLOT(slotCurrentIndexChanged(int)));
-        connect((QComboBox*)(this->cellWidget(row, 5)), SIGNAL(currentIndexChanged(int)), this, SLOT(slotCurrentIndexChanged(int)));
+        connect((QComboBox*)(this->cellWidget(row, 4)), SIGNAL(currentIndexChanged(int)), this, SLOT(slotCurrentIndexChanged(int)));
+        connect((QComboBox*)(this->cellWidget(row, 6)), SIGNAL(currentIndexChanged(int)), this, SLOT(slotCurrentIndexChanged(int)));
     }
 }
 

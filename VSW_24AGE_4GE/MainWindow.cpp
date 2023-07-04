@@ -176,11 +176,13 @@ void MainWindow::initStatusTableWidget()
             data.masterSlave = 0;
             data.duplex = 0;
 
-            data.chipName = TcpClientThread::instance()->portMapping(i);
-            if(i < 4) {
+            data.chipName = QString("P%1").arg(QString::number(i + 1));
+
+            int portId = TcpClientThread::instance()->portMapping(data.chipName);
+            if(portId < 4) {
                 data.chipType = 0;
             }
-            else if(i >= 4 && i < 28) {
+            else if(portId >= 4 && portId < 28) {
                 data.chipType = 1;
             }
 
@@ -228,8 +230,8 @@ void MainWindow::initPortManagetWidget()
     {
         for(int i = 0; i < 28; i ++) {
             PORT_DATA data;
-            data.chipID = i;
-            data.portName = TcpClientThread::instance()->portMapping(i);
+            data.portName = QString("P%1").arg(QString::number(i + 1));
+            data.chipID = TcpClientThread::instance()->portMapping(data.portName);
             data.portStatus = "Disable";
             data.portDuplex = "Auto";
             data.portSpeed = QString("1000M");
@@ -249,15 +251,14 @@ void MainWindow::initPortManagetWidget()
             data.loopback = i % 2;
             data.loopbackEnable = i % 2;
 
-            data.mirrorPortType = i % 2;
-            data.mirrorPortMonitorDir = i % 3;
-
-            data.loopback = i % 2;
-            data.loopbackEnable = i % 2;
+            data.mirrorPortType = 2;
+            data.mirrorPortMonitorDir = 2;
 
             portInfoList.append(data);
         }
     }
+
+    portTableWidgetAddItems(portInfoList);
 
     //设置PVID输入框的输入范围
     QRegularExpression regExpPVID("^(?:[0-9]|"
@@ -1042,8 +1043,7 @@ void MainWindow::slotBtnChipModifyClicked()
         }
         ui->groupBoxChipInfo->setVisible(false);
 
-        int chipId = TcpClientThread::instance()->portMapping(curChipData.chipName);
-        CHIP_DATA chipdata = TcpClientThread::instance()->getChipInfo(chipId);
+        CHIP_DATA chipdata = TcpClientThread::instance()->getChipInfo(curChipData.chipName);
 
         for(int i = 0; i < chipDataList.size(); i ++){
             if(chipdata.chipName == chipDataList[i].chipName){
@@ -1579,7 +1579,6 @@ void MainWindow::slotBtnCreateClicked()
             //后续添加插入VLAN ID
             if(!vlanIDIsExist(i)) {
                 //后续添加插入VLAN ID
-                qDebug() << i;
 
                 try {
                     TcpClientThread::instance()->createVlanID(i);
@@ -1651,11 +1650,10 @@ void MainWindow::slotBtnDeleteVlanPort()
             auto curVlanID = ui->tableWidgetVlanInfo->item(curVlanRow, 0)->text().toInt();
             for(int j = 0; j < portInfoList[i].taggedVlanID.size(); ) {
                 if(curVlanID == portInfoList[i].taggedVlanID[j]) {
-                    portInfoList[i].taggedVlanID.removeAt(j);
-                    slotVlanPortTypeChanged();
-
                     try {
                         TcpClientThread::instance()->vlanDeletePort(curVlanID, portInfoList[i].portName);
+                        portInfoList[i].taggedVlanID.removeAt(j);
+                        slotVlanPortTypeChanged();
                     }
                     catch (ServiceException& e) {
                         QMessageBox::information(this, "提示", e.getMessage());
