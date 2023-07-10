@@ -98,6 +98,12 @@ public:
 
     void setLoopBackTest(QString &portName, int loopback, int enable);
 
+    void getPortPVID(PORT_DATA& data);
+
+    void getPortPVID(QList<PORT_DATA> dataList);
+
+    void setPortPVID(const QString& portName, int pvid);
+
     QList<VLAN_DATA> getAllVlan();
 
     void createVlanID(int vlanId);
@@ -111,6 +117,8 @@ public:
     void vlanAddPort(int vlanId, const QString& portName);
 
     void vlanDeletePort(int vlanId, const QString& portName);
+
+    QList<int> getVlanPort(int vlanId);
 
     void createMacID(int portId);
 

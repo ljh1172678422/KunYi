@@ -16,13 +16,15 @@ CONFIG(debug, debug|release) {
     DESTDIR = $$PWD/bin/release
 }
 
-#TARGET = VSW_24AGE_4GE
+TARGET = KYGUI
 
 INCLUDEPATH += Form/ utils/ Widget/
 
 SOURCES += \
     Form/FormNetConfig.cpp \
     Form/FormSerialPortConfig.cpp \
+    VSW_24AGE_4GE.cpp \
+    Widget/CustomToolButton.cpp \
     Widget/MirrorPortTableWidget.cpp \
     Widget/MyTableWidget.cpp \
     main.cpp \
@@ -38,6 +40,8 @@ HEADERS += \
     Form/FormNetConfig.h \
     Form/FormSerialPortConfig.h \
     MainWindow.h \
+    VSW_24AGE_4GE.h \
+    Widget/CustomToolButton.h \
     Widget/MirrorPortTableWidget.h \
     Widget/MyTableWidget.h \
     utils/AutoGetChipDataThread.h \
@@ -52,7 +56,8 @@ HEADERS += \
 FORMS += \
     Form/FormNetConfig.ui \
     Form/FormSerialPortConfig.ui \
-    MainWindow.ui
+    MainWindow.ui \
+    VSW_24AGE_4GE.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

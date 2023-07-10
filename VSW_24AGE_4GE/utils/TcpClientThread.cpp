@@ -64,6 +64,9 @@ void TcpClientThread::initNetConnection(const QString &ip, int port)
 QByteArray TcpClientThread::sendData(int cmd, QByteArray content)
 {
     sendResult.clear();
+    if(!tcpSocket->isValid()){
+        return sendResult;
+    }
     if(tcpSocket->isOpen()) {
         QByteArray data;
         data.clear();
@@ -71,11 +74,8 @@ QByteArray TcpClientThread::sendData(int cmd, QByteArray content)
         data.append(content);       
 
         tcpSocket->write(data);
-        QPalette labelPalette;
 
         if(!tcpSocket->waitForReadyRead(2000)) {
-            labelPalette.setColor(QPalette::WindowText, Qt::red);
-            m_label->setPalette(labelPalette);
             m_label->setText("通讯超时！");
             return NULL;
         }
@@ -111,6 +111,7 @@ PORT_DATA TcpClientThread::getPortInfo(const QString &portName)
     if(result.isNull()) {
         throw ServiceException("");
     }
+
     char* cData = result.data();
     data.portName = portMapping(portId);
     data.chipID = portId;
@@ -400,6 +401,62 @@ void TcpClientThread::setLoopBackTest(QString& portName, int loopback, int enabl
     }
 }
 
+void TcpClientThread::getPortPVID(PORT_DATA &data)
+{
+    int portId = portMapping(data.portName);
+    QByteArray content;
+    content.clear();
+    content.append(QString::number(PVID_INFO).toLocal8Bit());
+    content.append(portIdToCmd(portId));
+
+    QByteArray result = sendData(READ_CMD, content);
+    if(result.isNull()){
+        throw ServiceException("");
+    }
+
+    char* cData = result.data();
+    data.PVID = cData[4];
+}
+
+void TcpClientThread::getPortPVID(QList<PORT_DATA> dataList)
+{
+    int size = dataList.size();
+    for(int i = 0; i < size; i ++){
+        getPortLoopback(dataList[i]);
+    }
+}
+
+void TcpClientThread::setPortPVID(const QString &portName, int pvid)
+{
+    int portID = portMapping(portName);
+
+    QByteArray content;
+    content.append(QString::number(PVID_INFO).toLocal8Bit());
+    content.append(portIdToCmd(portID));
+    content.append('0');
+    content.append('0');
+    content.append('0');
+    content.append(pvid);
+
+    auto result = sendData(WRITE_CMD, content);
+    if(result.isNull()){
+        throw ServiceException("设置端口PVID：通讯超时！");
+    }
+    QPalette labelPalette;
+    if(result == "success") {
+        labelPalette.setColor(QPalette::WindowText, Qt::green);
+        m_label->setPalette(labelPalette);
+        m_label->setText("配置端口PVID成功！");
+    }
+    else if(result == "error") {
+        labelPalette.setColor(QPalette::WindowText, Qt::red);
+        m_label->setPalette(labelPalette);
+        QString msg = QString("配置端口[%1]PVID失败！").arg(portMapping(portName));
+        m_label->setText(msg);
+        throw ServiceException(msg);
+    }
+}
+
 QList<VLAN_DATA> TcpClientThread::getAllVlan()
 {
     QList<VLAN_DATA> vlanData;
@@ -425,15 +482,30 @@ QList<VLAN_DATA> TcpClientThread::getAllVlan()
         m_label->setText(msg);
         return vlanData;
     }
-    else{
-        int size = result.size();
-        for(int i = 4; i < size; i ++){
-            VLAN_DATA data;
-            data.ID = result[i];
-            data.describe = QString("VLAN %1").arg(result[i]);
 
-            vlanData.append(data);
-        }
+    qDebug() << result.toHex(',') << "--" << result.size();
+
+    if(result.size() <= 6){
+        return vlanData;
+    }
+
+    char* cData = result.data();
+    int countH = cData[3];
+    int countL = cData[4];
+    int vlanSize = (countH << 8) + countL;
+    if(vlanSize >= result.size()){
+        qDebug() << vlanSize;
+        return vlanData;
+    }
+    for(int i = 0; i < vlanSize; i ++){
+        VLAN_DATA data;
+        int idH = cData[6 + i*2];
+        int idL = cData[7 + i*2];
+
+        data.ID = (idH >> 8) + idL;
+        data.describe = QString("VLAN %1").arg(QString::number(data.ID));
+
+        vlanData.append(data);
     }
 
     return vlanData;
@@ -523,7 +595,7 @@ void TcpClientThread::deleteVlanId(QList<int> vlanIdList)
 
 void TcpClientThread::vlanAddPort(int vlanId, const QString &portName)
 {
-    int portId = portName.split('P')[1].toInt();
+    int portId = portMapping(portName);
 
     QByteArray content;
     content.append(QString::number(VLAN_INFO).toLocal8Bit());
@@ -555,7 +627,7 @@ void TcpClientThread::vlanAddPort(int vlanId, const QString &portName)
 
 void TcpClientThread::vlanDeletePort(int vlanId, const QString &portName)
 {
-    int portId = portName.split('P')[1].toInt();
+    int portId = portMapping(portName);
 
     QByteArray content;
     content.append(QString::number(VLAN_INFO).toLocal8Bit());
@@ -583,6 +655,42 @@ void TcpClientThread::vlanDeletePort(int vlanId, const QString &portName)
         m_label->setText(msg);
         throw ServiceException(msg);
     }
+}
+
+QList<int> TcpClientThread::getVlanPort(int vlanId)
+{
+    QList<int> portList;
+    portList.clear();
+
+    QByteArray content;
+    content.append(QString::number(VLAN_INFO).toLocal8Bit());
+    content.append('0');
+    content.append(QString::number(VLAN_GET_PORT).toLocal8Bit());
+    content.append('0');
+    content.append('0');
+    content.append(vlanId);
+
+    auto result = sendData(WRITE_CMD, content);
+    if(result.isNull()){
+        throw ServiceException("");
+    }
+    else if(result == "error"){
+        QString msg = QString("VLAN[%1]获取端口失败！").arg(QString::number(vlanId));
+        m_label->setText(msg);
+        throw ServiceException(msg);
+    }
+
+    int size = result.size();
+    qDebug() << result.toHex(',');
+
+    char* cData = result.data();
+    for(int i = 4; i < size; i ++){
+        int portId = cmdToPortId(cData[i]);
+
+        portList.append(portId);
+    }
+
+    return portList;
 }
 
 void TcpClientThread::createMacID(int portId)

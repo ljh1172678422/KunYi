@@ -121,7 +121,7 @@ private:
      * @brief vlanTableWidgetAddItems       VLAN表格添加内容
      * @param vlanInfoList
      */
-    void vlanTableWidgetAddItems(const QList<VLAN_DATA>& vlanInfoList, int minID = 0, int maxID = 10240);
+    void vlanTableWidgetAddItems(const QList<VLAN_DATA>& vlanInfoList, int minID = 0, int maxID = 4096);
 
     /**
      * @brief vlanPortInfoTableWidgetAddItems   VLAN 端口信息表格添加内容

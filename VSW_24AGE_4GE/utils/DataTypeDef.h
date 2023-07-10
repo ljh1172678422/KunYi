@@ -12,6 +12,7 @@ typedef enum ReadWtiteType{
     VLAN_INFO = 4,              /* VLAN configure*/
     MAC_INFO = 5,               /* MAC configure*/
     LOOPBACK_INFO = 6,          /* LOOPBACK configure*/
+    PVID_INFO = 7,
 }R_W_TYPE;
 
 typedef enum VlanConfigType{
@@ -19,8 +20,9 @@ typedef enum VlanConfigType{
     DELETE_VLAN = 2,
     VLAN_ADD_PORT = 3,
     VLAN_DELETE_PORT = 4,
-    VLAN_GET_PORT = 5,
-    ALL_VLAN = 6
+    PORT_CONNECT = 5,
+    VLAN_GET_PORT = 6,
+    ALL_VLAN = 7
 }VLAN_CONFIG;
 
 //配置芯片信息指令类型
@@ -76,8 +78,8 @@ typedef struct port_data_info{
     int loopbackEnable;                             //环回测试使能：0：Disable，1：Enbale
 
     int mirrorPortEnable = 0;                       //端口镜像使能  0：Disable，1：Enbale
-    int mirrorPortType = 0;                         //镜像端口类型    0:Mirror Port镜像端口；1:Monitor Port监控端口
-    int mirrorPortMonitorDir = 0;                   //镜像端口监控方向 0：双向；1：入；2：出
+    int mirrorPortType = 0;                         //镜像端口类型    0:Mirror Port镜像端口；1:Monitor Port监控端口；2：NONE
+    int mirrorPortMonitorDir = 0;                   //镜像端口监控方向 1：入；2：出；0：双向
 }PORT_DATA;
 Q_DECLARE_METATYPE(PORT_DATA);
 
@@ -106,6 +108,7 @@ Q_DECLARE_METATYPE(MGROUP_DATA);
 typedef struct vlan_data_info{
     int ID;
     QString describe;
+    QList<int> portList;
 }VLAN_DATA;
 Q_DECLARE_METATYPE(VLAN_DATA);
 

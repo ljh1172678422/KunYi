@@ -21,5 +21,7 @@
         <file>QSS/LightBlue.css</file>
         <file>QSS/LightGray.css</file>
         <file>QSS/Sliver.css</file>
+        <file>icons/Offline.png</file>
+        <file>icons/Online.png</file>
     </qresource>
 </RCC>

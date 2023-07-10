@@ -23,7 +23,7 @@ VS_VERSION_INFO VERSIONINFO
 				VALUE "FileDescription", "\0"
                 VALUE "FileVersion", "1.0.0.1\0"
 				VALUE "LegalCopyright", "Copyright 2023 The KUNYI. All rights reserved.\0"
-				VALUE "OriginalFilename", "VSW_24AGE_4GE.exe\0"
+				VALUE "OriginalFilename", "KYGUI.exe\0"
 				VALUE "ProductName", "VSW_24AGE_4GE²âÊÔÌ×¼þ\0"
                 VALUE "ProductVersion", "1.0.0.1\0"
 				VALUE "InternalName", "\0"

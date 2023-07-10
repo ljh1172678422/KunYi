@@ -15,6 +15,8 @@
 #include <QRegularExpression>
 #include <QRegularExpressionValidator>
 
+#include "VSW_24AGE_4GE.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -31,6 +33,9 @@ MainWindow::MainWindow(QWidget *parent)
     initTabWidget();
 
     ui->gridLayout_11->setAlignment(Qt::AlignRight);
+
+    VSW_24AGE_4GE* test = new VSW_24AGE_4GE();
+    test->show();
 
     //隐藏线缆检测功能页
     //ui->tabWidget->removeTab(4);
